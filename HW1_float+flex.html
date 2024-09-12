@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_float+flex</title>
+    <style>
+        /* body{
+            padding: 100px;
+        } */
+
+        /* .wrapper{
+            width: 1070px;
+            margin: auto;
+           
+        } */
+        .img{
+            width: 470px;
+            height: 304px;
+        }
+
+        h2{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p{
+            font-size: 16px;
+
+        }
+
+        /* .content{
+            width: 470px;
+        } */
+
+        /* .right{
+            float: right;
+            width: 470px;
+        }
+
+        .left{
+            float: left;
+            width: 470px;
+        }
+        .clear{
+            clear: both;
+        } */
+
+        .wrapper{
+            width: 1070px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .right .left{
+            width: 470px;
+        }
+
+        .title .content{
+            width: 270px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="right">
+            <img class="img" src="assets/img01.jpg" alt="草地">
+            <h2 class="title">Quality</h2>
+            <p class="content">Quidam officiis similique sea ei, vel tollit indoctum efficiendi nihil tantas platonem eos. </p>
+        </div>
+       
+    
+        <div class="left">
+            <img class="img" src="assets/362060722_291247680225452_5441600051789140652_n.webp" alt="奧運">
+            <h2 class="title">Helpful</h2>
+            <p class="content">Deseruisse definitionem his et, an has veri integre abhorreant, nam alii epicurei et.</p>
+        </div>
+        
+        <!-- <div class="clear"></div> -->
+    </div>
+    
+
+</body>
+</html>

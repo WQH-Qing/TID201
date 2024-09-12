@@ -1,0 +1,35 @@
+.nav{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-bottom: 10px;
+}
+#master{
+    width: 100px;
+    height: 30px;
+    background-color: rgba(212, 0, 255, 0.902);
+    margin-left: 20px;
+}
+#slave{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(255, 203, 139);
+    margin-top: 30px;
+}
+#JH{
+    width: 150px;
+    height: 90px;
+    background-color: darkblue;
+    margin-left: 50px;
+}
+.img_01 {
+    width: 300px;
+}
+.border {
+    border: 10px solid #b7ff00;
+}
+
+.box .spec .h3{
+    font-size: 40px;
+    color : #ffcc00;
+}

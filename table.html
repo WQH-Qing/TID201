@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table表格</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(190, 190, 190);
+            padding: 10px 20px;
+        }
+
+        th {
+            background-color: rgb(235, 235, 235);
+        }
+
+        .information{
+            width: 900px;
+        }
+
+        .information td:nth-child(odd){
+            background-color: #1100ff;
+            color: #FFF;
+        }
+
+        .information td:nth-child(even){
+            background-color: #cecbff;
+            color: #000000;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>001</td>
+            <td>002</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>004</td>
+        </tr>
+
+    </table>
+
+    <h3>合併儲存格</h3>
+        <table>
+            <tr>
+                <td colspan="2">001 002</td>
+                <td rowspan="2">003 006</td>
+            </tr>
+            <tr>
+                <td colspan="2">004 005</td>
+            </tr>
+        </table>
+<br>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang	</td>
+            <td>Mexico</td>
+        </tr>
+        <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+        </tr>
+    </table>
+<br>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td colspan="2">小青</td>
+            <td></td>
+            <td rowspan="2">照片</td>
+            <td colspan="2" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td>種族</td>
+            <td>人族</td>
+            <td>已婚</td>
+            <td>照片</td>         
+        </tr>
+        <tr>
+            <td colspan="4">個人作品</td>            
+            <td>個人作品</td>
+            <td>個人作品</td>
+            <td>個人作品</td>
+        </tr>
+        <tr>
+            <td colspan="4">個人簡歷</td>           
+            <td>個人簡歷</td>
+            <td>個人簡歷</td>
+            <td>個人簡歷</td>
+        </tr>
+    </table>
+<br>
+
+    <table class="information">
+        <tr>
+            <td>序號</td>
+            <td>1</td>
+            <td>發言日期</td>
+            <td>113/08/12</td>
+            <td>發言時間</td>
+            <td>19:44:29</td>
+        </tr>
+        <tr>
+            <td>發言人</td>
+            <td>陳菀均</td>
+            <td>發言人職稱</td>
+            <td> 研發中心副總經理</td>
+            <td>發言人電話</td>
+            <td> 02-26558558</td>
+        </tr>
+        <tr>
+            <td>主旨</td>
+            <td colspan="5">今日接獲衛生福利部通知，中天生技已上市的生技新藥「化療漾」內服液，
+                更名為「上療漾」內服液</td>
+       
+        </tr>
+        <tr>
+            <td>符合條款</td>
+            <td>第53款</td>
+            <td>事實發生日</td>
+            <td colspan="3">113/08/16</td>
+       
+        </tr>
+        <tr>
+            <td>說明</td>
+            <td colspan="5"><ol>
+                <li>事實發生日: 113年08月16日</li>
+                <li>公司名稱: 中天生物科技股份有限公司</li>
+                <li>與公司關係: 本公司</li>
+                <li>相互持股比例: 不適用</li>
+                <li>發生緣由: <br>
+                        中天生技的「化療漾」內服液是公司基於腸道菌厭氧共生發酵技術研發的產品，這一技術平台名為Symbiota（信百歐塔）。該產品已獲得台灣首個口服癌症中藥新藥核准，適應症為「改善化學藥物治療之癌症病患的疲憊及食慾不振」。鑒於藥品上市後顯示在其他疾病治療與緩解上的潛力，公司決定將產品名稱更改為「上療漾」內服液，以更好地反映其潛在的應用範圍。
+                </li>
+                <li>因應措施: 無</li>
+                <li>其他應敘明事項:
+                    <ol>
+                        <li>中天腸道微生態Symbiota是公司精密技術研發的後生元（Postbiotics）產品。全產品系列已於今年7月獲得美國GRAS（一般公認安全）Independent/Self-affirmed安全性認證，包括「上療漾」在內，這將有助於拓展國際市場。</li>
+                        <li>根據國際益生菌及益生元協會（ISAPP）的定義：後生元指的是「能為宿主（即人體）提供健康益處的無生命微生物分泌物或其碎片產品」。</li>
+                    </ol>
+                </li>
+            </ol></td>
+    
+        </tr>
+    </table>
+</body>
+
+</html>
