@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-2col</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            max-width:1070px;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .wrapper .item{
+            width: 470px;
+        }
+        .item .box{
+            width: 470px;
+            height: 304px;
+            border-radius: 7px;
+            background: #EEE;
+        }
+        .item h2{
+            font-family: DM Sans;
+            font-size: 24px;
+            font-style: normal;
+            line-height: 32px; 
+        }
+        .item p{
+            font-family: DM Sans;
+            font-size: 16px;
+            font-style: normal;
+            line-height: 24px; 
+        }
+        @media screen and (max-width:956px) {
+            .wrapper{
+                justify-content: center;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">
+            <div class="box"></div>
+            <h2>Quality</h2>
+            <p>Quidam officiis similique sea ei, vel tollit indoctum efficiendi nihil tantas platonem eos. </p>
+        </div>
+        <div class="item">
+            <div class="box"></div>
+            <h2>Helpful</h2>
+            <p>Deseruisse definitionem his et, an has veri integre abhorreant, nam alii epicurei et.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

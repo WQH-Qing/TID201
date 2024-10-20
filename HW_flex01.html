@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW_flex01</title>
+
+    <style>
+        body ,h5 ,p{
+            margin: 0;
+            padding: 0;
+        }
+        
+        *{
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 100%;
+            height: 384px;
+            background-color: #eee ;
+            margin-bottom: 24px;
+        }
+        h5{
+            font-size:24px;
+            font: bold;
+            padding-bottom: 7px;
+        }
+        p{
+            font-size: 16px;
+        }
+        .contein-1{
+            width: 570px;
+        }
+        .wrapper{
+            width: 1170px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;            
+        }
+    </style>
+</head>
+<body>
+    <h1>flex01</h1>
+    <div class="wrapper">
+        <div class="contein-1">  
+            <div class="box"></div>
+            <h5>Minimalism in Architecture</h5>
+            <p>Nature</p>
+        </div>
+
+        <div class="contein-1">  
+            <div class="box"></div>
+            <h5>Museum Of Future</h5>
+            <p>Travel</p>
+        </div>      
+    </div>
+    
+</body>
+</html>

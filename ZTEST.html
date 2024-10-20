@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月曆</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 400px;
+        }
+        td {
+            width: 14.28%; /* 7 天 */
+            height: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .empty {
+            background-color: #f9f9f9; /* 空格子背景 */
+        }
+    </style>
+</head>
+<body>
+    <h1>月曆</h1>
+    <div id="calendar"></div>
+
+    <script>
+        function createCalendar(year, month) {
+            const calendarDiv = document.getElementById('calendar');
+            const date = new Date(year, month - 1);
+            const daysInMonth = new Date(year, month, 0).getDate();
+            const firstDay = new Date(year, month - 1, 1).getDay();
+            
+            let calendarHTML = '<table><tr>';
+
+            // 顯示星期標題
+            const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+            weekdays.forEach(day => {
+                calendarHTML += `<td>${day}</td>`;
+            });
+            calendarHTML += '</tr><tr>';
+
+            // 填充空格
+            for (let i = 0; i < firstDay; i++) {
+                calendarHTML += '<td class="empty"></td>';
+            }
+
+            // 填充日期
+            for (let day = 1; day <= daysInMonth; day++) {
+                calendarHTML += `<td>${day}</td>`;
+                if ((day + firstDay) % 7 === 0) { // 每週結束後換行
+                    calendarHTML += '</tr><tr>';
+                }
+            }
+
+            // 結束表格
+            calendarHTML += '</tr></table>';
+            calendarDiv.innerHTML = calendarHTML;
+        }
+
+        // 獲取當前年份和月份
+        const today = new Date();
+        createCalendar(today.getFullYear(), today.getMonth() + 1);
+    </script>
+</body>
+</html>
