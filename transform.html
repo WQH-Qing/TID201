@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 型變位移屬性</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding: 20px;
+            margin: 50px;
+        }
+
+        /* 物件位移 */
+        .translate{  
+            /* 用在物件固定位置上 */
+            position: relative;
+            top: 200px;
+            left: 300px;
+
+            /* 用在動畫上 */
+            /* transform: translate(300px,200px); */
+        }
+
+        /* 物件旋轉 */
+        .rotate{
+            transform: rotate(45deg);
+            background-color: pink;
+        }
+
+        /* 物件放大(值不變，視覺效果放大) (若內容物有字體，也會跟著放大) */
+        .scale{
+            transform: scale(2);
+            background-color: aqua;
+        }
+
+        /* 物件組合寫法 */
+        .multi{
+            transform: translate(250px) rotate(30deg) scale(1.5);
+            background-color: #44ff00;
+        }
+
+        /* 物件旋轉定位點預設在中央，定位點調整靠transform-origin */
+        /* 定位點:左上 左下 右上 右下 中心 中心上 中心下  */
+        .rect{
+            width: 300px;
+            height: 50px;
+            background-color: #70a2ff;
+            transform: rotate(-45deg);
+            transform-origin: right top;
+        }
+
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="rect">旋轉</div>
+    <div class="box translate"></div> 
+    <div class="box rotate"></div>
+    <div class="box scale"></div>
+    <div class="box multi"></div>
+
+
+
+    
+</body>
+</html>

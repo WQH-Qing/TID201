@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition 動畫過場屬性</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .btn{
+            padding: 10px 20px;
+            text-align: center;
+            background-color: palevioletred;
+            color: blanchedalmond;
+            transition: background-color .9s ease;
+                        /* css屬性       時間 動畫效果 */
+        }
+
+        .btn:hover{
+            background-color: brown;
+        }
+
+        .rect{
+            padding: 10px 20px;
+            width: 30px;
+            height: 40px;
+            background-color: blueviolet;
+            transition: width .5s ease-in-out;
+        }
+        .rect:hover{
+            width: 300px;
+        }
+
+        .rect-transform{
+            width: 200px;
+            height: 40px;
+            background-color: chartreuse;   
+            transition: transform .5s ease-in-out;         
+        }
+
+        .rect-transform:hover{
+            transform: rotate(-45deg) scale(2);
+            transform-origin: right top;
+        }
+
+        /* .hum{
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 7px 0;
+            transition: transform .5 ease;
+        }
+        .hum1:hover{
+            transform: rotate(45deg);
+            transform-origin: left top;
+        }
+        .hum2:hover{
+            opacity: 0;
+        }
+        .hum3:hover{
+            transform: rotate(-45deg);
+            transform-origin: left bottom;
+        } */
+
+
+        /* 漢堡選單 */
+        .hamburger {
+           display: flex;
+           flex-direction: column;
+        }
+
+        .hamburger span{
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 3px 0;
+            transform-origin: left;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .hamburger.active span:nth-child(1){
+            transform: rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2){
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3){
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">按鈕</div>
+    <div class="rect"></div>
+    <div class="rect-transform"></div>
+
+    <div class="hum hum1"></div>
+    <div class="hum hum2"></div>
+    <div class="hum hum3"></div>
+
+    <!-- 漢堡選單 -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>  
+    </div>
+
+    <script>
+        $(function () {
+            $('.hamburger').click(function() {
+                $(this).toggleClass('active')                
+            })            
+        })
+
+    </script>
+
+    
+</body>
+</html>
